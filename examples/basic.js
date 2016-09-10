@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {render} from 'react-dom';
 import {SortableContainer, SortableElement, arrayMove} from 'react-sortable-list-hoc';
 
-const SortableItem = SortableElement(({value}) => <li>{value}</li>);
+const SortableItem = SortableElement(({value}) => <li onDoubleClick={() => console.log('dblclicked')}>{value}</li>);
 
 const SortableList = SortableContainer(({items}) => {
 	return (
